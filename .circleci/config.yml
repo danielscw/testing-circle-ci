@@ -50,5 +50,7 @@ workflows:
           requires:
             - promote-to-production
           filters:
+            branches:
+              ignore: /.*/
             tags:
               only: /v\d+(\.\d+){0,2}/
